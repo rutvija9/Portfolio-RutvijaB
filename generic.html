@@ -141,17 +141,25 @@ I am proficient in Python, SQL, Power BI, Tableau, and statistical modeling, wit
             position: relative;
         }
 
+/* All images have the same width and height initially */
         .image-container img {
             width: 150px;
+            height: 150px; /* Ensures all images are the same size */
+            object-fit: cover; /* Maintains aspect ratio while filling the box */
             cursor: pointer;
             transition: transform 0.3s ease;
         }
 
+        /* Enlarged image displays at its natural size */
         .image-container img.enlarged {
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(2); /* Enlarge and center the image */
+            transform: translate(-50%, -50%);
+            width: auto; /* Removes the fixed width */
+            height: auto; /* Removes the fixed height */
+            max-width: 90%; /* Limits the size to fit the screen */
+            max-height: 90%; /* Prevents the image from exceeding the viewport height */
             z-index: 10;
         }
 
@@ -171,25 +179,25 @@ I am proficient in Python, SQL, Power BI, Tableau, and statistical modeling, wit
     <div class="image-gallery">
         <div class="image-container">
             <div class="overlay" id="overlay1"></div>
-            <img id="image1" src="images/pic01.jpg" alt="Image 1">
+            <img id="image1" src="images/Cert1.jpg" alt="Image 1">
         </div>
-        <div class="image-container">
+       <!-- <div class="image-container">
             <div class="overlay" id="overlay2"></div>
-            <img id="image2" src="images/pic01.jpg" alt="Image 2">
+            <img id="image2" src="images/Cert2.jpg" alt="Image 2">
         </div>
         <div class="image-container">
             <div class="overlay" id="overlay3"></div>
-            <img id="image3" src="images/pic01.jpg" alt="Image 3">
+            <img id="image3" src="images/Cert2.jpg" alt="Image 3">
         </div>
         <div class="image-container">
             <div class="overlay" id="overlay4"></div>
-            <img id="image4" src="images/pic01.jpg" alt="Image 4">
+            <img id="image4" src="images/Cert2.jpg" alt="Image 4">
         </div>
         <div class="image-container">
             <div class="overlay" id="overlay5"></div>
-            <img id="image5" src="images/pic01.jpg" alt="Image 5">
+            <img id="image5" src="images/Cert2.jpg" alt="Image 5">
         </div>
-    </div>
+    </div>-->
 
     <script>
         const images = [
